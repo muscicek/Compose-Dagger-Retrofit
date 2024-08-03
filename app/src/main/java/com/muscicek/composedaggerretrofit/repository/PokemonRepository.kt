@@ -10,7 +10,7 @@ import dagger.hilt.android.scopes.ActivityScoped
 import javax.inject.Inject
 
 
-
+@ActivityScoped
 class PokemonRepository @Inject constructor(private val api: PokeApi) {
 
     suspend fun getPokemonList(limit: Int, offset: Int): Resource<PokemonList> {
